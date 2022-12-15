@@ -6,6 +6,7 @@ import About from './About';
 import Contact from './Contact'
 import Appointment from './Appointment';
 import {Routes, Route} from 'react-router-dom'
+import Footer from './Footer';
 
 
 
@@ -16,6 +17,7 @@ if(tab === "Home"){return(
   <div>
       <Header setTab = {setTab}/>
       <Home/>
+      <Footer/>
   </div>
 )
 }
@@ -24,6 +26,7 @@ if(tab === "About"){
     <div>
       <Header setTab = {setTab} />
       <About/>
+      <Footer/>
     </div>
   )
 }
@@ -32,6 +35,7 @@ if(tab === "Contact"){
     <div>
       <Header setTab = {setTab} />
       <Contact/>
+      <Footer/>
     </div>
   )
 }
@@ -40,6 +44,7 @@ if(tab === "Appointment"){
     <div>
       <Header setTab = {setTab}/>
       <Appointment/>
+      <Footer/>
     </div>
   )
 }
