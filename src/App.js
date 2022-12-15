@@ -5,7 +5,6 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact'
 import Appointment from './Appointment';
-import {Routes, Route} from 'react-router-dom'
 import Footer from './Footer';
 
 
