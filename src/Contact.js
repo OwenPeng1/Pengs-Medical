@@ -4,11 +4,11 @@ import Img from './ClinicMap.png'
 
 function Contact() {
   return (
-    <div className="flex flex-row">
+    <div className=" flex flex-row">
       <div className="w-1/3">
-        <img className="my-40  w-full" src={Img} />
+        <img className=" mx-auto my-auto my-auto w-2/3 h-1/2 bg-sky-500 text-white" src={Img} />
       </div>
-      <div className="w-2/3 bg-sky-500 text-white h-screen">
+      <div className=" text align center w-2/3 bg-sky-500 text-white h-screen">
         <div className="text-4xl absolute top-40 right-60">
           <h2>Call Us: 3472408482</h2>
           <div className="-mx-10 space-x-4">

@@ -26,36 +26,44 @@ const sendEmail = (e) => {
 
 
 return(
-        <div className="flex items-center text-2xl h-screen w-3/5 float-right bg-sky-500 flex flex-row">
-            <form className = "mx-auto space-x-10 space-y-10 basis-1/3 bg-sky-500"ref = {form} onSubmit = {sendEmail}>
-                <label className="ml-10"> Name
-                <input
-                    type = "text"
-                    value = {name}
-                    onChange = {(e) => setName(e.target.value)}
-                    placeholder = "Name"
-                    name = "name"
-                    className="ml-10 block text-left"
-                />
-                </label>
-                <label class="inline-block float-left">Date of Appointment
-                    <DatePicker className="block text-left" name = "date" selected = {dateAppointment} closeCalender={true} onChange = {(date) => setDateAppointment(date)}/>
-                </label>
-                <label class="inline-block">Time of Appointment
-                    <TimePicker className="bg-white-500" name = "time" disableClock = {true} value = {timeAppointment} onChange = {setTimeAppointment}/>
-                </label>
-                <label className="block text-left" >Phone Number
+        <div className= "w-2/3 bg-sky-500 float-right h-screen">
+            <form className = "mt-40 ml-40 space-x-10 space-y-10 basis-1/3 bg-sky-500 px-4"ref = {form} onSubmit = {sendEmail}>
+                <div className="flex flex-col">
+                    <label className="ml-10"> Name
                     <input
                         type = "text"
-                        value = {phoneNumber}
-                        onChange = {(e) => setPhoneNumber(e.target.value)}
-                        placeholder = "Phone Number"
-                        name = "phoneNumber"
-                        className="block text-left"
+                        value = {name}
+                        onChange = {(e) => setName(e.target.value)}
+                        placeholder = "Name"
+                        name = "name"
+                        className=" block text-left"
                     />
-                </label>
+                    </label>
+                </div>
+                <div className="flex flex-row">
+                    <label className="inline-block float-left">Date of Appointment
+                        <DatePicker className="block text-left" name = "date" selected = {dateAppointment} closeCalender={true} onChange = {(date) => setDateAppointment(date)}/>
+                    </label>
+                </div>
+                <div className="flex flex-row">
+                    <label className= " inline-block">Time of Appointment
+                        <TimePicker className=" bg-white" name = "time" disableClock = {true} value = {timeAppointment} onChange = {setTimeAppointment}/>
+                    </label>
+                </div>
+                <div className="flex flex-rowl">
+                    <label className="inline-block" >Phone Number
+                        <input
+                            type = "text"
+                            value = {phoneNumber}
+                            onChange = {(e) => setPhoneNumber(e.target.value)}
+                            placeholder = "Phone Number"
+                            name = "phoneNumber"
+                            className="inline-block"
+                        />
+                    </label>
+                </div>
                 <button className="block text-left bg-orange-500 text-white"type="submit">Submit</button>
-            </form>
+                </form>
         </div>
     )
 }
