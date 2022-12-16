@@ -25,7 +25,7 @@ const sendEmail = (e) => {
       });
   }
 
-
+const currentDate = new Date()
 return(
         <div>
         <div className="w-1/3 float-left">
@@ -48,7 +48,15 @@ return(
                 </div>
                 <div className="flex flex-col">
                     <label className="inline-block float-left">Date of Appointment
-                        <DatePicker className="text-gray-500 block text-left" name = "date" selected = {dateAppointment} closeCalender={true} onChange = {(date) => setDateAppointment(date)}/>
+                        <input
+                            name = "date"
+                            label="Date of Appointment"
+                            type="date"
+                            onChange = {(date) => setDateAppointment(date)}
+                            defaultValue= {currentDate}
+                            className="text-gray-500 block text-left"
+
+                        />
                     </label>
                 </div>
                 <div className="flex flex-col">
